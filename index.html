@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang Đăng nhập</title>
+  <script>
+    function validateLogin() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      if (username === "admin" && password === "admin") {
+        document.getElementById("loginResult").textContent = "Đăng nhập thành công!";
+      } else {
+        document.getElementById("loginResult").textContent = "Đăng nhập thất bại. Vui lòng kiểm tra lại tên đăng nhập và mật khẩu.";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Trang Đăng nhập</h1>
+  <label for="username">Tên đăng nhập:</label>
+  <input type="text" id="username" name="username"><br><br>
+  
+  <label for="password">Mật khẩu:</label>
+  <input type="password" id="password" name="password"><br><br>
+  
+  <button onclick="validateLogin()">Đăng nhập</button>
+  <p id="loginResult"></p>
+</body>
+</html>
